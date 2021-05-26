@@ -1,0 +1,22 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detailed article</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+<div class="article_detail">
+    <div class="article">
+        <center>
+            <h2>{{ article.title }}</h2>
+    <p>{{ article.body }}</p>
+    <p>{{ article.date }}</p>
+        </center>
+
+        </div>
+</div>
+
+</body>
+</html>

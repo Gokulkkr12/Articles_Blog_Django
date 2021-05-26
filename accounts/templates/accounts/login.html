@@ -1,0 +1,38 @@
+{% load static%}
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <style>
+    </style>
+</head>
+<body>
+<center><h4 class="black-text">Login Page</h4></center>
+<button class="btn orange darken-2 right"><a class="white-text" href="{% url 'accounts:signup' %}">SignUp</a></button>
+<br>
+
+<div class="row">
+  <form class="col s12" action="/accounts/login/" method="post">
+
+    <div class="row">
+      <div class="col s6">
+        {% csrf_token %}
+        {{form}}
+        <center>
+        {% if request.GET.next %}
+          <input type="text" class="validate" name="next" value="{{request.GET.next}}">
+        {% endif %}
+        </center>
+        <button class="btn blue darken-2" type="submit">Login</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+<b><p class="black-text">SignUp If you don't have an Account</p></b>
+</body>
+</html>

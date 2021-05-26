@@ -1,0 +1,23 @@
+body{
+background-image:url('background.jpg');
+background-size:cover;
+color:white;
+font-size:20px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.articles{
+font-family: Arial, Helvetica, sans-serif;
+}
+.site-form input[type=text], input[type=password], select {
+    width: 30%;
+    padding: 8px 16px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.site_form label{
+  font-family:sans-serif;
+  font-size: 36px;
+}
